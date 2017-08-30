@@ -12,7 +12,7 @@
 
     // Set these to the payment cards accepted.
     // They will nearly always be the same.
-    supportedPaymentNetworks = @[PKPaymentNetworkVisa, PKPaymentNetworkMasterCard, PKPaymentNetworkAmex];
+    supportedPaymentNetworks = @[PKPaymentNetworkVisa, PKPaymentNetworkMasterCard, PKPaymentNetworkAmex, PKPaymentNetworkDiscover];
 
     // Set the capabilities that your merchant supports
     // Adyen for example, only supports the 3DS one.
@@ -594,10 +594,10 @@
 {
     NSLog(@"CDVApplePay: didAuthorizePayment");
 
-    [[STPAPIClient sharedClient] createTokenWithPayment:payment 
-                            completion:^(STPToken * _Nullable token, NSError * _Nullable error) {        
-        NSMutableDictionary* response = [self formatPaymentForApplication:payment];      
-        NSLog(@"Stripe token == %@", token.tokenId);        
+    [[STPAPIClient sharedClient] createTokenWithPayment:payment
+                            completion:^(STPToken * _Nullable token, NSError * _Nullable error) {
+        NSMutableDictionary* response = [self formatPaymentForApplication:payment];
+        NSLog(@"Stripe token == %@", token.tokenId);
         if (token) {
             [response setObject:token.tokenId forKey:@"stripeToken"];
         }
