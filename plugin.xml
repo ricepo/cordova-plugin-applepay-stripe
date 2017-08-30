@@ -6,7 +6,7 @@
     <name>Apple Pay with Stripe</name>
     <description>Implements Apple Pay with Stripe.</description>
     <keywords>cordova,payment,apple pay,stripe</keywords>
-    <repo>https://github.com/monoku/cordova-plugin-applepay-stripe</repo>
+    <repo>https://github.com/ricepo/cordova-plugin-applepay-stripe</repo>
 
     <preference name="STRIPE_LIVE_PUBLISHABLE_KEY" />
     <preference name="STRIPE_TEST_PUBLISHABLE_KEY" />
