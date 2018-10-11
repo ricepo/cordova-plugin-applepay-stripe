@@ -40,6 +40,15 @@
         <config-file target="*-Info.plist" parent="AppleMerchantIdentifier">
             <string>$APPLE_MERCHANT_IDENTIFIER</string>
         </config-file>
+	
+	
+        <config-file target="*.entitlements" parent="com.apple.developer.in-app-payments">
+            <array>
+                <string>$APPLE_MERCHANT_IDENTIFIER</string>
+            </array>
+        </config-file>
+
+
 
         <!-- Stripe iOS Framework -->
         <!-- Downloaded here: https://github.com/stripe/stripe-ios/releases/latest -->
