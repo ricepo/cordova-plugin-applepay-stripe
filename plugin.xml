@@ -52,7 +52,9 @@
 
         <!-- Stripe iOS Framework -->
         <!-- Downloaded here: https://github.com/stripe/stripe-ios/releases/latest -->
-        <framework src="src/ios/libs/Stripe.framework" custom="true" />
+        <framework src="src/ios/libs/Stripe.xcframework" custom="true" embed="true" />
+        <framework src="src/ios/libs/Stripe3DS2.xcframework" custom="true" embed="true" />
+        <framework src="src/ios/libs/StripeCore.xcframework" custom="true" embed="true" />
     </platform>
 
 </plugin>
