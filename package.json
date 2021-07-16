@@ -4,7 +4,6 @@
   "description": "> A dependency free Cordova plugin to provide Apple Pay functionality integrated with Stripe Framework.",
   "main": "www/applepay.js",
   "scripts": {
-    "postinstall": "node ./scripts/link"
   },
   "repository": {
     "type": "git",
